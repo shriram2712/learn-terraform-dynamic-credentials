@@ -10,6 +10,7 @@ data "tfe_outputs" "test" {
 
 output "public_dns" {
   value = data.tfe_outputs.test
+  sensitive = true
 }
 
 provider "aws" {
