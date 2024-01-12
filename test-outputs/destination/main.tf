@@ -5,7 +5,7 @@ data "tfe_outputs" "test" {
 
 
 data "aws_instance" "ec2" {
-    instance_id = data.tfe_outputs.test.values.ec2_name
+    instance_id = data.tfe_outputs.test.nonsensitive_values.ec2_name
 }
 
 output "public_dns" {
