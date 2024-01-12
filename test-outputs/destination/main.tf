@@ -1,17 +1,13 @@
 data "tfe_outputs" "test" {
-    organization =  "shriramrajaraman"
+    organization =  "shriram-org"
     workspace = "source"
 }
 
 
-data "aws_instance" "ec2" {
-    instance_id = data.tfe_outputs.test.nonsensitive_values.ec2_name
+output "number" {
+  value = data.tfe_outputs.test.values.number
 }
 
-output "public_dns" {
-  value = data.aws_instance.ec2.public_dns
-}
-
-provider "aws" {
-  region = "us-east-2"
+output "name" {
+  value = data.tfe_outputs.test.values.name
 }
