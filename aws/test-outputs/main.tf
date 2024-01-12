@@ -5,4 +5,5 @@ data "tfe_outputs" "test" {
 
 output "test" {
     value = data.tfe_outputs.test.values.domain_name
+    sensitive = true
 }
