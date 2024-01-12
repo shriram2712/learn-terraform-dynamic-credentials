@@ -38,9 +38,9 @@ resource "random_string" "name" {
 }
 
 output "name" {
-  value = random_string.name
+  value = random_string.name.result
 }
 
 output "number" {
-  value = random_integer.number1
+  value = random_integer.number1.result
 }
