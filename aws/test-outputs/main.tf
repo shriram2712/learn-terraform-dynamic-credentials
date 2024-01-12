@@ -3,7 +3,8 @@ data "tfe_outputs" "test" {
     workspace = "learn-terraform-dynamic-credentials"
 }
 
-output "test" {
+
+output "dns" {
     value = data.tfe_outputs.test.values.domain_name
     sensitive = true
 }
