@@ -4,7 +4,7 @@ data "tfe_outputs" "test" {
 }
 
 
-output "dns" {
+output "dns2" {
     value = data.tfe_outputs.test.values.domain_name
     sensitive = true
 }
